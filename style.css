@@ -1,15 +1,678 @@
-#navbar {
+
+/* 
+   1. GENERAL SETTINGS
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b091b;
+    color: white;
+}
+
+
+/*
+
+   2. HEADER AND NAVIGATION */
+
+header {
+    width: 100%;
+    background-color: #100e24;
+    padding: 20px 7%;
+    border-bottom: 1px solid #292044;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+
+.logo {
+    max-height: 80px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #a970ff;
+}
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d0cce0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a970ff;
+}
+
+/* Discover Dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1b1734;
+    min-width: 180px;
+    list-style: none;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #393052;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #30244d;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Login Button */
+
+.login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff);
+    color: white;
+    text-decoration: none;
+    padding: 11px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(169, 112, 255, 0.3);
+}
+
+/* Mobile Menu Icon */
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* 
+   3. HERO SECTION
+*/
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 10%;
+    background: linear-gradient(
+        120deg,
+        #0b091b,
+        #17112f,
+        #241447
+    );
+}
+
+/* Hero Text */
+
+.hero-content {
+    flex: 1;
+}
+
+.small-title {
+    color: #b58aff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #a970ff;
+}
+
+.description {
+    color: #c5c0d8;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+
+/*
+   4. HERO BUTTONS
+ */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #8052e8, #a970ff);
+    color: white;
+    text-decoration: none;
+    padding: 14px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(169, 112, 255, 0.3);
+}
+
+.secondary-btn {
+    display: inline-block;
+    border: 1px solid #a970ff;
+    color: white;
+    text-decoration: none;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background-color: #a970ff;
+}
+
+
+/*
+   5. HERO STATISTICS
+ */
+
+.hero-stats {
+    display: flex;
+    gap: 55px;
+    margin-top: 55px;
+}
+
+.hero-stats article h3 {
+    color: #b58aff;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.hero-stats article p {
+    color: #aaa4c2;
+    font-size: 13px;
+}
+
+
+/*
+   6. 15K USERS CARD
+ */
+
+.hero-right {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
 }
 
-#navbar a {
+.users-card {
+    width: 330px;
+    height: 330px;
+    background: linear-gradient(
+        135deg,
+        #6553d9,
+        #8955e8,
+        #b078ff
+    );
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
-    color: black;
-    font-size: 1.2em; 
+    color: white;
+    padding: 25px;
+    box-shadow: 0 15px 45px rgba(137, 85, 232, 0.25);
+    transition: 0.4s;
+}
+
+.users-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(137, 85, 232, 0.4);
+}
+
+.users-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.users-card h2 {
+    font-size: 58px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.users-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.users-card p {
+    color: #eee7ff;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.users-card span {
+    background-color: white;
+    color: #7951d8;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 
+/* 
+   7. ABOUT VIRTUAL REALITY SECTION
+*/
 
+.about-section {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #100e24;
+}
+
+.section-label {
+    color: #a970ff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-section h2,
+.discover-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.about-section h2 span,
+.discover-section h2 span {
+    color: #a970ff;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    color: #c5c0d8;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.text-link {
+    display: inline-block;
+    color: #b58aff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: white;
+}
+
+
+/* ========================================
+   8. DISCOVER SECTION
+======================================== */
+
+.discover-section {
+    padding: 100px 10%;
+    text-align: center;
+    background: linear-gradient(
+        120deg,
+        #0b091b,
+        #15102b
+    );
+}
+
+.discover-description {
+    color: #c5c0d8;
+    font-size: 15px;
+    margin-bottom: 45px;
+}
+
+
+/* 
+   9. DISCOVER CARDS
+ */
+
+.discover-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 330px;
+    background-color: #19152f;
+    border: 1px solid #30264d;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #a970ff;
+    box-shadow: 0 10px 30px rgba(137, 85, 232, 0.15);
+}
+
+/* Card Icons */
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #b58aff;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #c5c0d8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.card a {
+    color: #b58aff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: white;
+}
+
+
+/* 
+   10. FINAL SECTION
+ */
+
+.final-section {
+    padding: 90px 10%;
+    text-align: center;
+    background: linear-gradient(
+        120deg,
+        #31205d,
+        #6544b5,
+        #392064
+    );
+}
+
+.final-section h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.final-section p {
+    color: #e0d8f4;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.final-btn {
+    display: inline-block;
+    background-color: white;
+    color: #7650d2;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.final-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 
+   11. FOOTER
+ */
+
+footer {
+    background-color: #080714;
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #292044;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaa4c2;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #77718d;
+}
+
+
+/* 
+   12. TABLET AND MOBILE RESPONSIVE DESIGN
+ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 70px 6%;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .users-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+}
+
+
+/* 
+   13. MOBILE DESIGN
+ */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 6%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+        padding: 25px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .login-btn {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .hero-right {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .users-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-section,
+    .discover-section {
+        padding: 70px 7%;
+    }
+
+    .about-section h2,
+    .discover-section h2 {
+        font-size: 29px;
+    }
+
+    .discover-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .final-section {
+        padding: 70px 7%;
+    }
+
+    .final-section h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 35px 7%;
+    }
+
+}
