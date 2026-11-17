@@ -1,4 +1,3 @@
-
 /* 
    1. GENERAL SETTINGS
  */
@@ -15,7 +14,6 @@ body {
     background-color: #0b091b;
     color: white;
 }
-
 
 /*
 
@@ -36,13 +34,9 @@ header {
 
 /* Logo */
 
-.logo {
-    max-height: 80px;
-    text-decoration: none;
-}
-
-.logo span {
-    color: #a970ff;
+.logo img {
+    width: 183px;
+    height: auto;
 }
 
 /* Navigation Links */
@@ -128,6 +122,9 @@ header {
     font-size: 28px;
     cursor: pointer;
 }
+
+
+/* HOME PAGE */
 
 
 /* 
@@ -372,9 +369,7 @@ header {
 }
 
 
-/* ========================================
-   8. DISCOVER SECTION
-======================================== */
+/* 8. DISCOVER SECTION */
 
 .discover-section {
     padding: 100px 10%;
@@ -500,9 +495,444 @@ header {
 }
 
 
-/* 
-   11. FOOTER
- */
+/* About Us Page */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+    color: #a970ff;
+}
+
+.section-heading > p:last-child {
+    color: #aaa7ba;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ABOUT HERO */
+
+.about-hero {
+    min-height: 650px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-hero-content h1 {
+    color: white;
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-hero-content h1 span {
+    color: #a970ff;
+    display: block;
+}
+
+.about-hero-content > p:not(.section-label) {
+    color: #aaa7ba;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 14px 27px;
+    background: linear-gradient(110deg, #7655f5, #9c63ff);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(133, 94, 255, 0.3);
+}
+
+.about-hero-image {
+    flex: 1;
+    max-width: 550px;
+    height: 400px;
+    position: relative;
+}
+
+.about-hero-image::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(169, 112, 255, 0.4);
+    border-radius: 18px;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+/* MISSION AND VISION */
+
+.mission-section {
+    padding: 100px 9%;
+    background: #11101c;
+}
+
+.mission-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mission-card {
+    background: #191827;
+    border: 1px solid #29263d;
+    border-radius: 14px;
+    padding: 40px;
+    transition: 0.3s;
+    flex: 1;
+}
+
+.mission-card:hover {
+    transform: translateY(-7px);
+    border-color: #8063ef;
+}
+
+.mission-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #aaa7ba;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* WHAT WE OFFER */
+
+.offer-section {
+    padding: 110px 9%;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.offer-card {
+    background: #151421;
+    border: 1px solid #29263d;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 30%;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    border-color: #8063ef;
+}
+
+.offer-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.06);
+}
+
+.offer-content {
+    padding: 25px;
+}
+
+.offer-number {
+    color: #a970ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.offer-content h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.offer-content > p:not(.offer-number) {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 95px;
+    margin-bottom: 20px;
+}
+
+.offer-content a {
+    color: #a970ff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.offer-content a:hover {
+    color: white;
+}
+
+
+/* WHY CHOOSE VYRA */
+
+.why-section {
+    padding: 100px 9%;
+    background: #11101c;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.why-card {
+    background: #191827;
+    border: 1px solid #29263d;
+    border-radius: 12px;
+    padding: 30px 22px;
+    transition: 0.3s;
+    width: 23%;
+}
+
+.why-card:hover {
+    border-color: #8063ef;
+    transform: translateY(-6px);
+}
+
+.why-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(169, 112, 255, 0.12);
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.why-card h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* OUR TEAM */
+
+.team-section {
+    padding: 110px 9% 50px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    background: #151421;
+    border: 1px solid #29263d;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 23%;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    border-color: #8063ef;
+}
+
+.team-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.team-info p {
+    color: #a970ff;
+    font-size: 12px;
+}
+
+
+/* JOIN OUR TEAM */
+
+.join-team {
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    padding: 35px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: #191827;
+    border: 1px solid #30264f;
+    border-radius: 13px;
+}
+
+.join-team-content h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.join-team-content p {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.join-team-btn {
+    flex-shrink: 0;
+    padding: 13px 24px;
+
+    background: linear-gradient(110deg, #7655f5, #9c63ff);
+    color: white;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.join-team-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(133, 94, 255, 0.3);
+}
+
+
+/* FINAL CTA */
+
+.about-final {
+    margin: 75px 9% 100px;
+    padding: 85px 30px;
+    text-align: center;
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(115, 77, 255, 0.25),
+            transparent 60%
+        ),
+        linear-gradient(135deg, #19152e, #11101c);
+    border: 1px solid #30264f;
+}
+
+.about-final h2 {
+    color: white;
+    font-size: 43px;
+    margin-bottom: 18px;
+}
+
+.about-final h2 span {
+    color: #a970ff;
+    display: block;
+}
+
+.about-final > p:not(.section-label) {
+    color: #aaa7ba;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+
+/* FOOTER */
 
 footer {
     background-color: #080714;
@@ -514,6 +944,14 @@ footer {
 footer .logo {
     display: inline-block;
     margin-bottom: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+footer .logo span {
+    color: #a970ff;
 }
 
 footer p {
@@ -525,16 +963,18 @@ footer p {
 footer .copyright {
     font-size: 12px;
     margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #292044;
     color: #77718d;
 }
 
 
-/* 
-   12. TABLET AND MOBILE RESPONSIVE DESIGN
- */
 
-@media (max-width: 900px) {
 
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+     /* HOME PAGE */
     .hero {
         padding: 70px 6%;
         gap: 30px;
@@ -557,16 +997,37 @@ footer .copyright {
         gap: 18px;
     }
 
+    /* ABOUT US PAGE */
+     .about-hero {
+        padding: 80px 6%;
+        gap: 40px;
+    }
+
+    .about-hero-image {
+        height: 330px;
+    }
+
+    .why-card {
+        width: 45%;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+    .offer-card {
+        width: 45%;
+    }
+
+    .offer-card:last-child {
+        width: 100%;
+        max-width: 550px;
+    }
 }
 
-
-/* 
-   13. MOBILE DESIGN
- */
-
-@media (max-width: 700px) {
-
-    header {
+@media (max-width: 768px) {
+    /* HOME PAGE */
+     header {
         padding: 18px 6%;
     }
 
@@ -610,6 +1071,10 @@ footer .copyright {
         flex-direction: column;
         text-align: center;
         padding: 65px 7%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 45px;
     }
 
     .hero-content {
@@ -663,6 +1128,10 @@ footer .copyright {
         max-width: 400px;
     }
 
+    .about-final h2 {
+    font-size: 34px;
+}
+
     .final-section {
         padding: 70px 7%;
     }
@@ -673,6 +1142,124 @@ footer .copyright {
 
     footer {
         padding: 35px 7%;
+    }
+
+    /* ABOUT US PAGE */
+    .join-team {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .join-team-btn {
+        align-self: flex-start;
+    }
+
+    .about-hero {
+        flex-direction: column;
+        padding: 70px 7%;
+        gap: 50px;
+    }
+
+    .about-hero-content {
+        max-width: 100%;
+    }
+
+    .about-hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .mission-section,
+    .offer-section,
+    .why-section,
+    .team-section {
+        padding: 75px 7%;
+    }
+
+    .mission-cards {
+        flex-direction: column;
+    }
+
+    .mission-card {
+        width: 100%;
+    }
+
+    .offer-cards {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        width: 100%;
+    }
+
+    .why-card {
+        width: 45%;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+    .team-image {
+        height: 230px;
+    }
+
+    .about-final {
+        margin: 30px 5% 70px;
+        padding: 65px 20px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    /* HOME PAGE */
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .hero-stats article h3 {
+        font-size: 23px;
+    }
+
+    .users-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* ABOUT US PAGE */
+     .about-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .about-final h2 {
+    font-size: 29px;
+}
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .why-card {
+        width: 100%;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .team-image {
+        height: 300px;
+    }
+
+    .mission-card {
+        padding: 28px;
     }
 
 }
