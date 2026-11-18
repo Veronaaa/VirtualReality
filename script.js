@@ -10,3 +10,26 @@ menuButton.addEventListener("click", function() {
 
 });
 
+/* DARK MODE AND LIGHT MODE */
+
+let themeButton = document.getElementById("themeButton");
+
+/* Check saved theme */
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light");
+    themeButton.textContent = "🌙";
+}
+
+themeButton.addEventListener("click", function() {
+
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+        themeButton.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    } else {
+        themeButton.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+    }
+
+});

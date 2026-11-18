@@ -1,5 +1,5 @@
 /* 
-   1. GENERAL SETTINGS
+1. GENERAL SETTINGS
  */
 
 * {
@@ -17,7 +17,7 @@ body {
 
 /*
 
-   2. HEADER AND NAVIGATION */
+2. HEADER AND NAVIGATION */
 
 header {
     width: 100%;
@@ -32,11 +32,32 @@ header {
     align-items: center;
 }
 
-/* Logo */
+/* Logo Sizing & Switching */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
 
 .logo img {
     width: 183px;
     height: auto;
+}
+
+.light-logo {
+    display: none;
+}
+
+.dark-logo {
+    display: block;
+}
+
+body.light .dark-logo {
+    display: none !important;
+}
+
+body.light .light-logo {
+    display: block !important;
 }
 
 /* Navigation Links */
@@ -112,6 +133,28 @@ header {
     box-shadow: 0 5px 20px rgba(169, 112, 255, 0.3);
 }
 
+/* Theme Button */
+
+#themeButton {
+    background: none;
+    border: 1px solid #393052;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    border-color: #a970ff;
+    transform: translateY(-2px);
+}
+
 /* Mobile Menu Icon */
 
 .menu-icon {
@@ -128,7 +171,7 @@ header {
 
 
 /* 
-   3. HERO SECTION
+3. HERO SECTION
 */
 
 .hero {
@@ -181,7 +224,7 @@ header {
 
 
 /*
-   4. HERO BUTTONS
+4. HERO BUTTONS
  */
 
 .hero-buttons {
@@ -225,7 +268,7 @@ header {
 
 
 /*
-   5. HERO STATISTICS
+5. HERO STATISTICS
  */
 
 .hero-stats {
@@ -247,7 +290,7 @@ header {
 
 
 /*
-   6. 15K USERS CARD
+6. 15K USERS CARD
  */
 
 .hero-right {
@@ -318,7 +361,7 @@ header {
 
 
 /* 
-   7. ABOUT VIRTUAL REALITY SECTION
+7. ABOUT VIRTUAL REALITY SECTION
 */
 
 .about-section {
@@ -389,7 +432,7 @@ header {
 
 
 /* 
-   9. DISCOVER CARDS
+9. DISCOVER CARDS
  */
 
 .discover-cards {
@@ -452,7 +495,7 @@ header {
 
 
 /* 
-   10. FINAL SECTION
+10. FINAL SECTION
  */
 
 .final-section {
@@ -601,7 +644,7 @@ header {
 
 .mission-section {
     padding: 100px 9%;
-    background: #11101c;
+    background: #0b091b;
 }
 
 .mission-cards {
@@ -732,7 +775,7 @@ header {
 
 .why-section {
     padding: 100px 9%;
-    background: #11101c;
+    background: #0b091b;
 }
 
 .why-grid {
@@ -966,6 +1009,68 @@ footer .copyright {
     padding-top: 20px;
     border-top: 1px solid #292044;
     color: #77718d;
+}
+
+/* LIGHT MODE */
+
+/* LIGHT MODE */
+
+body.light {
+    background: white !important;
+    color: #171326 !important;
+}
+
+body.light *:not(header):not(header *):not(nav):not(nav *) {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #171326 !important;
+}
+
+/* Navbar */
+body.light header {
+    background: white !important;
+    border-bottom: 1px solid #dddddd !important;
+}
+
+body.light .navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+body.light .logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+body.light .logo img {
+    width: 183px !important;
+    height: auto !important;
+}
+
+body.light .login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff) !important;
+    color: white !important;
+}
+
+body.light #themeButton {
+    border: 1px solid #dddddd !important;
+    color: #171326 !important;
+    background: transparent !important;
+}
+
+/* Cards */
+body.light .mission-card,
+body.light .offer-card,
+body.light .why-card,
+body.light .team-card,
+body.light .discover-card {
+    background: #f1eff5 !important;
+}
+
+/* Footer */
+body.light footer {
+    background: #f1eff5 !important;
 }
 
 
