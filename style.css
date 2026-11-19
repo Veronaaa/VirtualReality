@@ -1414,3 +1414,490 @@ body.light footer {
     }
 
 }
+
+
+
+/* 
+   FAQ PAGE
+ */
+
+.faq-hero {
+    text-align: center;
+    padding: 100px 20px 55px;
+}
+
+.faq-small-title {
+    color: #b58aff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.faq-hero h1,
+.reviews-heading h2,
+.write-review-content h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.faq-hero h1 span,
+.reviews-heading h2 span,
+.write-review-content h2 span {
+    color: #a970ff;
+}
+
+.faq-hero > p:last-child,
+.reviews-heading > p:last-child,
+.write-review-description {
+    color: #aaa7ba;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* FAQ TWO COLUMNS */
+
+.faq-section {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.faq-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #191827;
+    border: 1px solid #30264d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #a970ff;
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 21px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    color: #e5e0f3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-icon {
+    color: #a970ff;
+    font-size: 23px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.9;
+    padding: 0 20px 20px;
+}
+
+
+/* 
+   CUSTOMER REVIEWS
+*/
+
+.reviews-section {
+    padding: 90px 30px;
+    background: #100e24;
+    text-align: center;
+}
+
+.reviews-heading {
+    margin-bottom: 45px;
+}
+
+.reviews-slider {
+    max-width: 1150px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 22px;
+    transition: transform 0.8s ease;
+}
+
+.review-card {
+    flex: 0 0 calc((100% - 44px) / 3);
+    min-width: 0;
+    box-sizing: border-box;
+
+    background: #191827;
+    border: 1px solid #30264d;
+    border-radius: 16px;
+    padding: 30px 25px;
+
+    text-align: left;
+    min-height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-stars {
+    color: #ffc857;
+    font-size: 21px;
+    letter-spacing: 3px;
+    margin-bottom: 17px;
+}
+
+.review-text {
+    color: #c5c0d8;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.review-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #8052e8, #a970ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: 600;
+}
+
+.review-person h3 {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.review-person span {
+    color: #aaa7ba;
+    font-size: 11px;
+}
+
+
+/* REVIEW SLIDER BUTTONS */
+
+.review-slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.review-slider-buttons button {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 1px solid #a970ff;
+
+    background: transparent;
+    color: #a970ff;
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-slider-buttons button:hover {
+    background: #8052e8;
+    color: white;
+}
+
+
+/* 
+   WRITE A REVIEW */
+
+.write-review-section {
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.write-review-content {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.write-review-description {
+    max-width: 520px;
+    margin: 0 auto 35px;
+}
+
+.review-form {
+    background: #191827;
+    border: 1px solid #30264d;
+    border-radius: 18px;
+    padding: 35px;
+    text-align: left;
+}
+
+.review-form label {
+    display: block;
+    color: #e5e0f3;
+    font-size: 13px;
+    margin: 20px 0 10px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    border: 1px solid #30264d;
+    border-radius: 9px;
+
+    background: #100e24;
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+    border-color: #a970ff;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+    color: #777286;
+}
+
+
+/* STAR RATING */
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+}
+
+.star-rating button {
+    background: transparent;
+    border: none;
+
+    color: #625d70;
+    font-size: 32px;
+
+    cursor: pointer;
+    padding: 0;
+    transition: 0.2s;
+}
+
+.star-rating button.selected {
+    color: #ffc857;
+}
+
+.star-rating button:hover {
+    transform: scale(1.15);
+}
+
+
+/* SUBMIT REVIEW BUTTON */
+
+.submit-review-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(90deg, #8052e8, #a970ff);
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-review-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(169, 112, 255, 0.3);
+}
+
+
+/* 
+   FAQ LIGHT MODE
+ */
+
+body.light .faq-item,
+body.light .review-card,
+body.light .review-form {
+    background: #f1eff5 !important;
+    border-color: #e3d9f5 !important;
+}
+
+body.light .faq-question,
+body.light .review-person h3,
+body.light .review-form label {
+    color: #211a36 !important;
+}
+
+body.light .faq-answer p,
+body.light .review-text {
+    color: #686477 !important;
+}
+
+body.light .faq-hero h1,
+body.light .reviews-heading h2,
+body.light .write-review-content h2 {
+    color: #171326 !important;
+}
+
+body.light .faq-hero > p:last-child,
+body.light .reviews-heading > p:last-child,
+body.light .write-review-description {
+    color: #686477 !important;
+}
+
+body.light .reviews-section {
+    background: #f1eff5 !important;
+}
+
+body.light .review-person span {
+    color: #777286 !important;
+}
+
+body.light .review-form input,
+body.light .review-form textarea {
+    background: white !important;
+    color: #211a36 !important;
+    border-color: #ded5ed !important;
+}
+
+body.light .star-rating button:not(.selected) {
+    color: #aaa4b8 !important;
+}
+
+body.light .star-rating button.selected {
+    color: #e5a900 !important;
+}
+
+
+/* 
+   FAQ RESPONSIVE DESIGN
+ */
+
+@media (max-width: 900px) {
+
+    .faq-grid {
+        gap: 15px;
+    }
+
+    .faq-question {
+        font-size: 12px;
+        padding: 18px 14px;
+    }
+
+    .review-card {
+        flex: 0 0 calc((100% - 22px) / 2);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .faq-hero {
+        padding: 70px 20px 40px;
+    }
+
+    .faq-hero h1,
+    .reviews-heading h2,
+    .write-review-content h2 {
+        font-size: 27px;
+    }
+
+    .faq-section {
+        padding: 15px 18px 65px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .faq-question {
+        font-size: 13px;
+        padding: 19px 16px;
+    }
+
+    .reviews-section {
+        padding: 65px 18px;
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+    }
+
+    .write-review-section {
+        padding: 65px 18px;
+    }
+
+    .review-form {
+        padding: 23px 18px;
+    }
+
+}
