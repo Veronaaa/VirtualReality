@@ -1141,19 +1141,62 @@ body.light footer {
 
     .navbar {
         flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
     .menu-icon {
         display: block;
+        order: 1;
+        font-size: 25px;
+        padding: 5px;
     }
+
+   .logo {
+    order: 2;
+    position: static;
+    transform: none;
+    flex-shrink: 2;
+    }
+
+    .logo img{
+        width: 150px;
+        height: auto;
+    }
+    .nav-right {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    }   
+    .login-btn{
+        font-size: 17px;
+        padding: 5px;
+
+    }
+    #themeButton {
+    font-size: 12px;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+}
 
     .nav-links {
         display: none;
+        order: 4;
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
-        gap: 20px;
-        padding: 25px 0;
+        gap: 40px;
+        padding: 20px 0;
+    }
+
+    .nav-links.show {
+    display: flex;
     }
 
     .nav-links.active {
@@ -1162,7 +1205,7 @@ body.light footer {
 
     .login-btn {
         margin-left: auto;
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     .dropdown-menu {

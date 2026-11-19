@@ -14,7 +14,6 @@ menuButton.addEventListener("click", function() {
 
 let themeButton = document.getElementById("themeButton");
 
-/* Check saved theme */
 if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light");
     themeButton.textContent = "🌙";
