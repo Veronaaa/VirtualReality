@@ -302,5 +302,19 @@ if (reviewForm) {
         alert("Thank you for your review!");
 
     });
-
 }
+
+/* =================================
+   TEXT BOX CHARACTER COUNTER
+================================= */
+
+const message = document.getElementById("message");
+
+        const characterCount = document.querySelector(".character-count");
+
+        message.addEventListener("input", function () {
+
+            characterCount.textContent =
+                message.value.length + "/300";
+
+        });
