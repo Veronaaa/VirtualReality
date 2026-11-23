@@ -1085,9 +1085,7 @@ body.light footer {
 
 
 
-/* 
-   FAQ PAGE
- */
+/* faq page */
 
 .faq-hero {
     text-align: center;
@@ -1125,7 +1123,7 @@ body.light footer {
 }
 
 
-/* FAQ TWO COLUMNS */
+/* faq 2 kolona */
 
 .faq-section {
     max-width: 1250px;
@@ -1203,9 +1201,7 @@ body.light footer {
 }
 
 
-/* 
-   CUSTOMER REVIEWS
-*/
+/* costumer review */
 
 .reviews-section {
     padding: 90px 30px;
@@ -1295,7 +1291,7 @@ body.light footer {
 }
 
 
-/* REVIEW SLIDER BUTTONS */
+/* review buttons */
 
 .review-slider-buttons {
     display: flex;
@@ -1391,7 +1387,7 @@ body.light footer {
 }
 
 
-/* STAR RATING */
+/* star rating */
 
 .star-rating {
     display: flex;
@@ -1419,7 +1415,7 @@ body.light footer {
 }
 
 
-/* SUBMIT REVIEW BUTTON */
+/* buttton submit for review */
 
 .submit-review-btn {
     width: 100%;
@@ -1446,9 +1442,7 @@ body.light footer {
 }
 
 
-/* 
-   FAQ LIGHT MODE
- */
+/* faq light mode */
 
 body.light .faq-item,
 body.light .review-card,
@@ -1504,9 +1498,7 @@ body.light .star-rating button.selected {
 }
 
 
-/* 
-   FAQ RESPONSIVE DESIGN
- */
+/* faq responsive design*/
 
 @media (max-width: 900px) {
 
