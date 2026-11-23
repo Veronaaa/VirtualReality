@@ -34,9 +34,9 @@ themeButton.addEventListener("click", function() {
 });
 
 
-/* =================================
+/*
    FAQ ACCORDION
-================================= */
+*/
 
 let faqQuestions = document.querySelectorAll(".faq-question");
 
@@ -185,9 +185,9 @@ if (reviewsTrack && nextReview && previousReview) {
 }
 
 
-/* =================================
+/*
    STAR RATING
-================================= */
+ */
 
 let starButtons = document.querySelectorAll(".star-rating button");
 let ratingValue = document.getElementById("ratingValue");
@@ -217,9 +217,9 @@ starButtons.forEach(function(star) {
 });
 
 
-/* =================================
+/* 
    SUBMIT CUSTOMER REVIEW
-================================= */
+*/
 
 let reviewForm = document.getElementById("reviewForm");
 
@@ -304,9 +304,7 @@ if (reviewForm) {
     });
 }
 
-/* =================================
-   TEXT BOX CHARACTER COUNTER
-================================= */
+/* TEXT BOX CHARACTER COUNTER */
 
 const message = document.getElementById("message");
 
