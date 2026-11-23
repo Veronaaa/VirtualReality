@@ -16,7 +16,7 @@ let themeButton = document.getElementById("themeButton");
 
 if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light");
-    themeButton.textContent = "🌙";
+    themeButton.textContent = "☽";
 }
 
 themeButton.addEventListener("click", function() {
@@ -24,10 +24,10 @@ themeButton.addEventListener("click", function() {
     document.body.classList.toggle("light");
 
     if (document.body.classList.contains("light")) {
-        themeButton.textContent = "🌙";
+        themeButton.textContent = "☽";
         localStorage.setItem("theme", "light");
     } else {
-        themeButton.textContent = "☀️";
+        themeButton.textContent = "☀︎";
         localStorage.setItem("theme", "dark");
     }
 
