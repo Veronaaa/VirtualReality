@@ -1,0 +1,980 @@
+
+/* 
+1. GENERAL SETTINGS
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b091b;
+    color: white;
+}
+
+
+/*
+2. HEADER AND NAVIGATION
+*/
+
+header {
+    width: 100%;
+    background-color: #100e24;
+    padding: 20px 7%;
+    border-bottom: 1px solid #292044;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 183px;
+    height: auto;
+}
+
+.light-logo {
+    display: none;
+}
+
+.dark-logo {
+    display: block;
+}
+
+body.light .dark-logo {
+    display: none !important;
+}
+
+body.light .light-logo {
+    display: block !important;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d0cce0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a970ff;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+/* Discover Dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1b1734;
+    min-width: 180px;
+    list-style: none;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #393052;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #30244d;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Login Button */
+
+.login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff);
+    color: white;
+    text-decoration: none;
+    padding: 11px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Theme Button */
+
+#themeButton {
+    background: none;
+    border: 1px solid #393052;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    border-color: #a970ff;
+    transform: translateY(-2px);
+}
+
+/* Mobile Menu Icon */
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/*
+3. ABOUT US PAGE
+*/
+
+/* Section Heading */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+    color: #a970ff;
+}
+
+.section-heading > p:last-child {
+    color: #aaa7ba;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* About Hero */
+
+.about-hero {
+    min-height: 650px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-hero-content h1 {
+    color: white;
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.section-label {
+    color: #a970ff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-hero-content h1 span {
+    color: #a970ff;
+    display: block;
+}
+
+.about-hero-content > p:not(.section-label) {
+    color: #aaa7ba;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 14px 27px;
+    background: linear-gradient(110deg, #7655f5, #9c63ff);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    transform: translateY(-4px);
+}
+
+.about-hero-image {
+    flex: 1;
+    max-width: 550px;
+    height: 400px;
+    position: relative;
+}
+
+.about-hero-image::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(169, 112, 255, 0.4);
+    border-radius: 18px;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* Mission and Vision */
+
+.mission-section {
+    padding: 100px 9%;
+    background: #0b091b;
+}
+
+.mission-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mission-card {
+    background: #191827;
+    border: 1px solid #29263d;
+    border-radius: 14px;
+    padding: 40px;
+    transition: 0.3s;
+    flex: 1;
+}
+
+.mission-card:hover {
+    transform: translateY(-7px);
+    border-color: #8063ef;
+}
+
+.mission-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #aaa7ba;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* What We Offer */
+
+.offer-section {
+    padding: 110px 9%;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.offer-card {
+    background: #151421;
+    border: 1px solid #29263d;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 30%;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    border-color: #8063ef;
+}
+
+.offer-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.06);
+}
+
+.offer-content {
+    padding: 25px;
+}
+
+.offer-number {
+    color: #a970ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.offer-content h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.offer-content > p:not(.offer-number) {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 95px;
+    margin-bottom: 20px;
+}
+
+.offer-content a {
+    color: #a970ff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.offer-content a:hover {
+    color: white;
+}
+
+/* Why Choose VYRA */
+
+.why-section {
+    padding: 100px 9%;
+    background: #0b091b;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.why-card {
+    background: #191827;
+    border: 1px solid #29263d;
+    border-radius: 12px;
+    padding: 30px 22px;
+    transition: 0.3s;
+    width: 23%;
+}
+
+.why-card:hover {
+    border-color: #8063ef;
+    transform: translateY(-6px);
+}
+
+.why-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(169, 112, 255, 0.12);
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.why-card h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Our Team */
+
+.team-section {
+    padding: 110px 9% 50px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    background: #151421;
+    border: 1px solid #29263d;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 23%;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    border-color: #8063ef;
+}
+
+.team-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.team-info p {
+    color: #a970ff;
+    font-size: 12px;
+}
+
+/* Join Our Team */
+
+.join-team {
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #191827;
+    border: 1px solid #30264f;
+    border-radius: 13px;
+}
+
+.join-team-content h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.join-team-content p {
+    color: #aaa7ba;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.join-team-btn {
+    flex-shrink: 0;
+    padding: 13px 24px;
+    background: linear-gradient(110deg, #7655f5, #9c63ff);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.join-team-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Final CTA */
+
+.about-final {
+    margin: 75px 9% 100px;
+    padding: 85px 30px;
+    text-align: center;
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(115, 77, 255, 0.25),
+            transparent 60%
+        ),
+        linear-gradient(135deg, #19152e, #11101c);
+    border: 1px solid #30264f;
+}
+
+.about-final h2 {
+    color: white;
+    font-size: 43px;
+    margin-bottom: 18px;
+}
+
+.about-final h2 span {
+    color: #a970ff;
+    display: block;
+}
+
+.about-final > p:not(.section-label) {
+    color: #aaa7ba;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+
+/*
+4. FOOTER
+*/
+
+footer {
+    background-color: #080714;
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #292044;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    justify-content: center;
+}
+
+footer .logo span {
+    color: #a970ff;
+}
+
+footer p {
+    color: #aaa4c2;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #292044;
+    color: #77718d;
+}
+
+
+/*
+5. LIGHT MODE
+*/
+
+body.light {
+    background: white !important;
+    color: #171326 !important;
+}
+
+body.light *:not(header):not(header *):not(nav):not(nav *) {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #171326 !important;
+}
+
+body.light *:not(.active):not(.dropdown-menu a):not(.login-btn):not(:hover) {
+    color: #171326 !important;
+}
+
+/* Navbar */
+
+body.light header {
+    background: white !important;
+    border-bottom: 1px solid #dddddd !important;
+}
+
+body.light .navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+body.light .logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+body.light .logo img {
+    width: 183px !important;
+    height: auto !important;
+}
+
+body.light .login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff) !important;
+    color: white !important;
+}
+
+body.light #themeButton {
+    border: 1px solid #dddddd !important;
+    color: #171326 !important;
+    background: transparent !important;
+}
+
+body.light #themeButton:hover {
+    border: 1px solid #a970ff !important;
+}
+
+
+/* Cards */
+
+body.light .mission-card,
+body.light .offer-card,
+body.light .why-card,
+body.light .team-card {
+    background: #f1eff5 !important;
+}
+
+body.light .btn-border {
+    border: 1px solid #66518a;
+}
+
+body.light .btn-border:hover {
+    border: 1px solid #a970ff;
+}
+
+/* Footer */
+
+body.light footer {
+    background: #f1eff5 !important;
+}
+
+
+/*
+6. RESPONSIVE DESIGN
+*/
+
+@media (max-width: 1028px) {
+
+    /* Navbar */
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    /* About Us */
+
+    .about-hero {
+        padding: 80px 6%;
+        gap: 40px;
+    }
+
+    .about-hero-image {
+        height: 330px;
+    }
+
+    .why-card {
+        width: 45%;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+    .offer-card {
+        width: 45%;
+    }
+
+    .offer-card:last-child {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Header and Navigation */
+
+    header {
+        padding: 18px 6%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .menu-icon {
+        display: block;
+        order: 1;
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .logo {
+        order: 2;
+        position: static;
+        transform: none;
+        flex-shrink: 2;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .nav-right {
+        order: 3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    .login-btn {
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    #themeButton {
+        font-size: 12px;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 20px 0;
+    }
+
+    .nav-links.show,
+    .nav-links.active {
+        display: flex;
+    }
+
+    .login-btn {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* About Us */
+
+    .about-hero {
+        flex-direction: column;
+        padding: 70px 7%;
+        gap: 50px;
+    }
+
+    .about-hero-content {
+        max-width: 100%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 45px;
+    }
+
+    .about-hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .join-team {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .join-team-btn {
+        align-self: flex-start;
+    }
+
+    .mission-section,
+    .offer-section,
+    .why-section,
+    .team-section {
+        padding: 75px 7%;
+    }
+
+    .mission-cards {
+        flex-direction: column;
+    }
+
+    .mission-card {
+        width: 100%;
+    }
+
+    .offer-cards {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        width: 100%;
+    }
+
+    .why-card {
+        width: 45%;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+    .team-image {
+        height: 230px;
+    }
+
+    .about-final {
+        margin: 30px 5% 70px;
+        padding: 65px 20px;
+    }
+
+    .about-final h2 {
+        font-size: 34px;
+    }
+
+    footer {
+        padding: 35px 7%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* About Us */
+
+    .about-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .about-final h2 {
+        font-size: 29px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .why-card {
+        width: 100%;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .team-image {
+        height: 300px;
+    }
+
+    .mission-card {
+        padding: 28px;
+    }
+
+    /* Navbar */
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        gap: 13px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+}

@@ -1,3 +1,183 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b091b;
+    color: white;
+}
+
+
+/* HEADER AND NAVIGATION */
+
+header {
+    width: 100%;
+    background-color: #100e24;
+    padding: 20px 7%;
+    border-bottom: 1px solid #292044;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 183px;
+    height: auto;
+}
+
+.light-logo {
+    display: none;
+}
+
+.dark-logo {
+    display: block;
+}
+
+body.light .dark-logo {
+    display: none !important;
+}
+
+body.light .light-logo {
+    display: block !important;
+}
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d0cce0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a970ff;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* DISCOVER DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1b1734;
+    min-width: 180px;
+    list-style: none;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #393052;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #30244d;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff);
+    color: white;
+    text-decoration: none;
+    padding: 11px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(169, 112, 255, 0.3);
+}
+
+
+/* THEME BUTTON */
+
+#themeButton {
+    background: none;
+    border: 1px solid #393052;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    border-color: #a970ff;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE MENU ICON */
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* REGISTER PAGE */
+
 .register-page {
     min-height: calc(100vh - 90px);
     padding: 60px 4%;
@@ -9,10 +189,7 @@
 }
 
 
-
-
 /* MAIN CONTAINER */
-
 
 .register-container {
     width: 100%;
@@ -102,7 +279,6 @@
 
 
 /* FORM CARD */
-
 
 .register-card {
     position: relative;
@@ -416,9 +592,114 @@ body.light .register-submit {
 }
 
 
-/* =========================
-   REGISTER PAGE RESPONSIVE
-========================= */
+/* FOOTER */
+
+footer {
+    background-color: #080714;
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #292044;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    justify-content: center;
+}
+
+footer .logo span {
+    color: #a970ff;
+}
+
+footer p {
+    color: #aaa4c2;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #292044;
+    color: #77718d;
+}
+
+
+/* LIGHT MODE */
+
+body.light {
+    background: white !important;
+    color: #171326 !important;
+}
+
+body.light *:not(header):not(header *):not(nav):not(nav *):not(.register-bottom-text a) {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #171326 !important;
+}
+
+body.light *:not(.active):not(.dropdown-menu a):not(.login-btn):not(:hover):not(.register-bottom-text a) {
+    color: #171326 !important;
+}
+
+
+/* NAVBAR */
+
+body.light header {
+    background: white !important;
+    border-bottom: 1px solid #dddddd !important;
+}
+
+body.light .navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+body.light .logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+body.light .logo img {
+    width: 183px !important;
+    height: auto !important;
+}
+
+body.light .login-btn {
+    background: linear-gradient(90deg, #8052e8, #a970ff) !important;
+    color: white !important;
+}
+
+body.light #themeButton {
+    border: 1px solid #dddddd !important;
+    color: #171326 !important;
+    background: transparent !important;
+}
+
+body.light #themeButton:hover {
+    border: 1px solid #a970ff !important;
+}
+
+body.light .register-bottom-text a {
+    color: #a640ff;
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+body.light footer {
+    background: #f1eff5 !important;
+}
+
+
+/* REGISTER PAGE RESPONSIVE */
 
 @media (max-width: 1200px) {
 
