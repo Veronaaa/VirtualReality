@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYRA VR | Login</title>
+
+    <link rel="stylesheet" href="/CSS/Login.css">
+    <link rel="stylesheet" href="/style.css">
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+             <button class="menu-icon" id="menuButton">☰</button>
+
+            <a href="index.html" class="logo">
+                <!-- Dark Mode Logo (shown by default in dark mode) -->
+                <img src="/img/LogoDark.png" class="dark-logo" alt="VYRA VR">
+                <!-- Light Mode Logo (hidden by default, shown in light mode) -->
+                <img src="/img/LogoLight.png" class="light-logo" alt="VYRA VR">
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About Us</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Discover ▾</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="headsets.html">VR Headsets</a></li>
+                        <li><a href="movies.html">VR Movies</a></li>
+                        <li><a href="games.html">VR Games</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="faq.html">FAQ</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <div class="nav-right">
+                <a href="Login.html" class="login-btn"  class="active">Log In</a>
+                <button id="themeButton">☀︎</button>
+            </div>
+
+
+        </nav>
+
+    </header>
+
+    <main class="login-page">
+
+        <div class="portal portal-one"></div>
+        <div class="portal portal-two"></div>
+
+        <section class="login-container">
+
+            <div class="login-card">
+
+                <p class="login-small-title">VYRA VR ACCESS</p>
+
+                <h1>Welcome Back, Explorer</h1>
+
+                <p class="login-description">
+                    Your journey into another reality is waiting for you.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="login-input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="login-input-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-box">
+                            <input type="password" id="password"
+                                placeholder="Enter your password" required>
+
+                            <button type="button" id="showPassword">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+
+                        <label>
+                            <input type="checkbox" id="remember">
+                            Remember me
+                        </label>
+
+                        <a href="#">Forgot password?</a>
+
+                    </div>
+
+                    <button type="submit" class="portal-button">
+                        UNLOCK MY PORTAL →
+                    </button>
+
+                    <p id="loginMessage"></p>
+
+                </form>
+
+                <div class="login-divider">
+                    <span>OR</span>
+                </div>
+
+                <p class="register-text">
+                    New to VYRA VR?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <script src="JS/Login.js"></script>
+
+</body>
+</html>

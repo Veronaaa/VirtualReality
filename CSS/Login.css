@@ -1,0 +1,285 @@
+
+/* LOGIN PAGE */
+
+.login-page {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 60px 20px;
+    background: #0b091b;
+}
+
+/* GLOWING PORTAL EFFECT */
+
+.portal {
+    position: absolute;
+    border: 2px solid #a970ff;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 25px #a970ff,
+                inset 0 0 25px #a970ff;
+    opacity: 0.25;
+}
+
+.portal-one {
+    width: 550px;
+    height: 550px;
+    animation: portalRotate 15s linear infinite;
+}
+
+.portal-two {
+    width: 650px;
+    height: 650px;
+    border-color: #7040c5;
+    animation: portalRotate 20s linear infinite reverse;
+}
+
+@keyframes portalRotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.05);
+    }
+}
+
+/* LOGIN CARD */
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-card {
+    background: rgba(25, 24, 39, 0.95);
+    border: 1px solid #49336c;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 0 40px rgba(169, 112, 255, 0.2);
+    text-align: center;
+}
+
+.login-small-title {
+    color: #b58aff;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.login-card h1 {
+    color: white;
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.login-description {
+    color: #aaa7ba;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* INPUTS */
+
+.login-input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-input-group label {
+    display: block;
+    color: #c5c0d8;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.login-input-group input {
+    width: 100%;
+    padding: 14px;
+    background: #100e24;
+    border: 1px solid #393052;
+    border-radius: 9px;
+    color: white;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.login-input-group input:focus {
+    border-color: #a970ff;
+    box-shadow: 0 0 10px rgba(169, 112, 255, 0.2);
+}
+
+/* PASSWORD FIELD */
+
+.password-box {
+    display: flex;
+    align-items: center;
+    background: #100e24;
+    border: 1px solid #393052;
+    border-radius: 9px;
+}
+
+.password-box input {
+    border: none;
+    box-shadow: none;
+}
+
+.password-box button {
+    background: transparent;
+    border: none;
+    color: #b58aff;
+    cursor: pointer;
+    padding: 10px;
+    font-family: inherit;
+}
+
+/* LOGIN OPTIONS */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.login-options label {
+    color: #aaa7ba;
+}
+
+.login-options a,
+.register-text a {
+    color: #b58aff;
+    text-decoration: none;
+}
+
+.login-options a:hover,
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+
+.portal-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #7040c5, #a970ff);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.portal-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(169, 112, 255, 0.6);
+}
+
+/* DIVIDER AND REGISTER */
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #777187;
+    font-size: 12px;
+    margin: 25px 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #393052;
+}
+
+.register-text {
+    color: #aaa7ba;
+    font-size: 13px;
+}
+
+#loginMessage {
+    color: #b58aff;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* LIGHT MODE */
+
+body.light .login-page {
+    background: #f5f2fc;
+}
+
+body.light .login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #d6c3f5;
+}
+
+body.light .login-card h1 {
+    color: #211638;
+}
+
+body.light .login-description,
+body.light .login-options label,
+body.light .register-text {
+    color: #625b70;
+}
+
+body.light .login-input-group label {
+    color: #393052;
+}
+
+body.light .login-input-group input,
+body.light .password-box {
+    background: #f7f5fb;
+    color: #211638;
+}
+
+body.light .login-divider::before,
+body.light .login-divider::after {
+    background: #d6c3f5;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .login-page {
+        padding: 40px 15px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-card h1 {
+        font-size: 23px;
+    }
+
+    .portal-one {
+        width: 350px;
+        height: 350px;
+    }
+
+    .portal-two {
+        width: 420px;
+        height: 420px;
+    }
+
+    .login-options {
+        font-size: 11px;
+    }
+}

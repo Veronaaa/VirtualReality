@@ -71,9 +71,9 @@ faqQuestions.forEach(function(question) {
 });
 
 
-/* =================================
+/*
    REVIEW SLIDER
-================================= */
+ */
 
 let reviewsTrack = document.getElementById("reviewsTrack");
 let nextReview = document.getElementById("reviewNext");
