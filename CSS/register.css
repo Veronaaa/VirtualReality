@@ -1,0 +1,571 @@
+.register-page {
+    min-height: calc(100vh - 90px);
+    padding: 60px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* MAIN CONTAINER */
+
+
+.register-container {
+    width: 100%;
+    max-width: 1450px;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+
+    border: 1px solid rgba(125, 45, 255, 0.6);
+    border-radius: 30px;
+
+    background: rgba(12, 8, 29, 0.75);
+}
+
+
+/* LEFT SIDE */
+
+.register-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px;
+    min-width: 0;
+    flex: 1.15;
+}
+
+.register-hero-content {
+    max-width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.register-eyebrow {
+    color: #a43dff;
+    letter-spacing: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.register-hero-content h1 {
+    font-size: clamp(45px, 5vw, 80px);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.register-hero-content h1 span {
+    display: block;
+    color: #9d35ff;
+}
+
+.register-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #c1b8d7;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+
+/* BENEFITS */
+
+.register-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.register-benefit {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #d5cbea;
+    font-size: 15px;
+}
+
+.register-benefit i {
+    width: 45px;
+    font-size: 30px;
+    color: #9639ff;
+}
+
+
+/* FORM CARD */
+
+
+.register-card {
+    position: relative;
+    z-index: 3;
+    align-self: center;
+
+    margin: -20px 0;
+    padding: 35px 40px;
+
+    min-width: 0;
+    flex: 0.85;
+
+    min-height: 690px;
+
+    border: 1px solid rgba(140, 45, 255, 0.75);
+    border-radius: 28px;
+
+    background: rgba(10, 6, 25, 0.94);
+}
+
+
+/* REGISTER / LOGIN TABS */
+
+.register-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.register-tabs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #302644;
+}
+
+.register-tab {
+    width: 50%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+
+    color: #8e86a6;
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    border-bottom: 2px solid transparent;
+}
+
+.register-tab:hover {
+    color: white;
+}
+
+.register-tab.active {
+    color: white;
+    border-bottom: 2px solid #a02cff;
+}
+
+
+/* INPUT FIELDS */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-input-group {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+    width: 100%;
+
+    border: 1px solid #302445;
+    border-radius: 15px;
+
+    background: rgba(12, 8, 26, 0.8);
+
+    transition: 0.3s;
+}
+
+.register-input-group:focus-within {
+    border-color: #9639ff;
+}
+
+.register-input-group > i {
+    width: 55px;
+    text-align: center;
+    font-size: 20px;
+    color: #f2efff;
+}
+
+.register-input-group input {
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.register-input-group input::placeholder {
+    color: #89829f;
+}
+
+.register-password-toggle {
+    width: 50px;
+    height: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #aaa1c4;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.register-password-toggle:hover {
+    color: #a640ff;
+}
+
+
+/* TERMS */
+
+.register-terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin: 5px 0 10px;
+
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ddd5eb;
+}
+
+.register-terms input {
+    accent-color: #9639ff;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.register-terms a {
+    color: #a640ff;
+}
+
+.register-terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* SUBMIT BUTTON */
+
+.register-submit {
+    width: 100%;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border: none;
+    border-radius: 35px;
+
+    background: linear-gradient(
+        90deg,
+        #6d20e8,
+        #9d32ff
+    );
+
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.light .register-submit {
+    border: 1px solid #66518a;
+}
+
+.register-submit:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        90deg,
+        #812dff,
+        #b34bff
+    );
+}
+
+.register-submit i {
+    transition: 0.3s;
+}
+
+.register-submit:hover i {
+    transform: translateX(5px);
+}
+
+
+/* SEPARATOR */
+
+.register-separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 5px 0;
+}
+
+.register-separator span {
+    flex: 1;
+    height: 1px;
+    background-color: #40344e;
+}
+
+.register-separator p {
+    color: #b8aecb;
+    font-size: 13px;
+}
+
+
+/* GOOGLE BUTTON */
+
+.register-google {
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: transparent;
+    border: 1px solid #66518a;
+    border-radius: 35px;
+
+    color: white;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-google:hover {
+    border-color: #a33dff;
+    background-color: rgba(110, 40, 220, 0.1);
+}
+
+.register-google i {
+    font-size: 20px;
+    color: #4285f4;
+}
+
+
+/* BOTTOM TEXT */
+
+.register-bottom-text {
+    text-align: center;
+    font-size: 13px;
+    color: #d5cde5;
+    margin-top: 20px;
+}
+
+.register-bottom-text a {
+    color: #a640ff;
+    text-decoration: underline;
+}
+
+.register-bottom-text a:hover {
+    color: #c27aff;
+}
+
+.register-forgot {
+    align-self: flex-end;
+    font-size: 13px;
+    color: #a640ff;
+    margin-top: -5px;
+}
+
+.register-forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* FORM MESSAGE */
+
+.register-message {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+    color: #a640ff;
+}
+
+.register-hide {
+    display: none;
+}
+
+
+/* =========================
+   REGISTER PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .register-hero {
+        padding: 40px;
+    }
+
+    .register-hero-content h1 {
+        font-size: 55px;
+    }
+
+    .register-card {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .register-page {
+        padding: 40px 4%;
+    }
+
+    .register-container {
+        flex-direction: column;
+        max-width: 650px;
+    }
+
+    .register-hero {
+        width: 100%;
+        flex: none;
+        min-height: 420px;
+        padding: 45px;
+    }
+
+    .register-hero-content {
+        max-width: 400px;
+    }
+
+    .register-hero-content h1 {
+        font-size: 60px;
+    }
+
+    .register-card {
+        width: 100%;
+        flex: none;
+        margin: 0;
+        min-height: auto;
+        border-radius: 0 0 28px 28px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .register-page {
+        padding: 25px 4%;
+    }
+
+    .register-container {
+        border-radius: 22px;
+    }
+
+    .register-hero {
+        min-height: 380px;
+        padding: 30px;
+    }
+
+    .register-eyebrow {
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+
+    .register-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .register-description {
+        font-size: 14px;
+        max-width: 270px;
+    }
+
+    .register-benefits {
+        gap: 15px;
+    }
+
+    .register-benefit {
+        font-size: 13px;
+        gap: 15px;
+    }
+
+    .register-benefit i {
+        font-size: 23px;
+        width: 30px;
+    }
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-tabs {
+        margin-bottom: 25px;
+    }
+
+    .register-tab {
+        font-size: 15px;
+    }
+
+    .register-input-group {
+        height: 55px;
+    }
+
+    .register-input-group input {
+        font-size: 14px;
+    }
+
+    .register-terms {
+        font-size: 11px;
+    }
+
+    .register-submit {
+        height: 52px;
+        font-size: 15px;
+    }
+
+    .register-google {
+        height: 50px;
+        font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .register-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .register-hero {
+        padding: 25px;
+    }
+
+    .register-card {
+        padding: 20px 15px;
+    }
+
+}

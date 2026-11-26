@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ledian Gashi">
+    <title>VYRA VR | Explore Beyond Reality</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="img/LogoDark.png" class="dark-logo" alt="VYRA VR">
+                <img src="img/LogoLight.png" class="light-logo" alt="VYRA VR">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Discover ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="headsets.html">VR Headsets</a></li>
+                        <li><a href="movies.html">VR Movies</a></li>
+                        <li><a href="games.html">VR Games</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="login.html" class="login-btn active">Log In</a>
+                <button id="themeButton">☀︎</button>
+            </div>
+
+            <button class="menu-icon" id="menuButton">☰</button>
+        </nav>
+
+    </header>
+
+
+
+    <main class="register-page">
+
+        <section class="register-container">
+
+            <!-- LEFT SIDE -->
+            <div class="register-hero">
+                <div class="register-hero-content">
+                    <p class="register-eyebrow">JOIN VYRA VR</p>
+
+                    <h1>
+                        Create Your
+                        <span>Account</span>
+                    </h1>
+
+                    <p class="register-description">
+                        Step into a new reality. Register now
+                        and start your VR journey.
+                    </p>
+
+                    <div class="register-benefits">
+                        <div class="register-benefit">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Access Exclusive Content</span>
+                        </div>
+
+                        <div class="register-benefit">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Save Your Progress</span>
+                        </div>
+
+                        <div class="register-benefit">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>Be Part of Our Community</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE / FORM CARD -->
+            <div class="register-card">
+
+                <h2 class="register-title">Create Your Account</h2>
+
+                <!-- REGISTER FORM -->
+                <form id="registerForm" class="register-form">
+
+                    <div class="register-input-group">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="fullName" placeholder="Full Name" autocomplete="name" required>
+                    </div>
+
+                    <div class="register-input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="registerEmail" placeholder="Email Address" autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="register-input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="registerPassword" placeholder="Password" autocomplete="new-password"
+                            minlength="8" required>
+
+                        <button type="button" class="register-password-toggle" data-target="registerPassword"
+                            aria-label="Show password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="register-input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password"
+                            autocomplete="new-password" minlength="8" required>
+
+                        <button type="button" class="register-password-toggle" data-target="confirmPassword"
+                            aria-label="Show password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="register-submit">
+                        <span>Register</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="register-separator">
+                        <span></span>
+                        <p>or</p>
+                        <span></span>
+                    </div>
+
+                    <button type="button" class="register-google" id="googleButton">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+
+                </form>
+
+                <p class="register-bottom-text">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+
+                <p class="register-message" id="formMessage"></p>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <a href="index.html" class="logo">
+            <img src="img/LogoDark.png" class="dark-logo" alt="VYRA VR">
+            <img src="img/LogoLight.png" class="light-logo" alt="VYRA VR">
+        </a>
+        <p>Explore beyond reality. Experience the future.</p>
+        <p class="copyright">© 2026 VYRA VR. All rights reserved.</p>
+    </footer>
+
+    <script src="JS/register.js"></script>
+
+</body>
+
+</html>
